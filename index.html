@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabbed Counter</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="card">
+    <div class="tabs">
+      <button class="tablink" onclick="openTab(event, 'stopwatch')">Stopwatch</button>
+      <button class="tablink" onclick="openTab(event, 'counter')">Counter</button>
+    </div>
+
+    <div id="stopwatch" class="tabcontent">
+      <h2>Stopwatch</h2>
+      <input type="number" id="stopwatchDuration" placeholder="Enter duration in seconds">
+      <p id="stopwatchDisplay">00:00:00</p>
+      <button onclick="startStopwatch()">Start</button>
+      <button onclick="stopStopwatch()">Stop</button>
+      <button onclick="resetStopwatch()">Reset</button>
+    </div>
+
+    <div id="counter" class="tabcontent">
+      <h2>Counter</h2>
+      <input type="number" id="counterDuration" placeholder="Enter duration in seconds">
+      <p id="counterDisplay">0</p>
+      <button onclick="startCounter()">Start</button>
+      <button onclick="stopCounter()">Stop</button>
+      <button onclick="resetCounter()">Reset</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
